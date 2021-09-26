@@ -1,0 +1,19 @@
+.PrimaryButton {
+	width: 100%;
+	height: auto;
+	border: 0;
+	outline: 0;
+	background-color: var(--primary);
+	color: var(--on-primary);
+	transition: 0.5s all ease;
+	padding: 8px;
+	font-size: 24px;
+	border-radius: 8px;
+	margin: 24px 0 0 0;
+}
+
+.PrimaryButton:hover {
+	background-color: var(--on-primary);
+	color: var(--primary);
+	border-radius: 0;
+}

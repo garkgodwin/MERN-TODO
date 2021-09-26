@@ -1,0 +1,25 @@
+.FormGroup1 {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+}
+
+.fg1-label {
+	font-size: 20px;
+	color: var(--secondary);
+}
+
+.fg1-input {
+	font-size: 20px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	border-bottom: 1px solid var(--secondary);
+	color: var(--o);
+	padding: 8px;
+}
+
+.fg1-input::placeholder {
+	color: var(--placeholder-1);
+}

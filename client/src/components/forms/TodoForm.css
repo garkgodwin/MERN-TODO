@@ -1,0 +1,109 @@
+.TodoForm {
+	background-color: var(--dark-form);
+	width: auto;
+	height: auto;
+	border-radius: 24px;
+	transition: all 1s ease;
+	position: relative;
+	display: flex;
+	padding: 24px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.TodoForm * {
+	transition: all 2s ease-out;
+}
+.TodoForm form {
+	transition: all 0.5 ease-out;
+}
+
+.TodoForm.hidden .tf-form * {
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.TodoForm.hidden .tf-form {
+	width: 0;
+	height: 0;
+	padding: 0;
+}
+.TodoForm.hidden .tf-form .tf-buttons button {
+	width: 0;
+	height: 0;
+}
+.tf-form {
+	width: 500px;
+	height: 400px;
+	padding: 16px 16px 8px 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+.tf-buttons {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.arrows {
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.arrow {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	bottom: -40px;
+	transition: all 1s ease;
+	border-radius: 50px;
+}
+
+.arrow:hover {
+	background-color: white;
+	border-radius: 50px;
+}
+.arrow.hidden {
+	opacity: 0;
+	z-index: 0;
+}
+.arrow.shown {
+	opacity: 1;
+	z-index: 100;
+}
+
+@media only screen and (max-width: 768px) {
+	.tf-form {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.tf-form {
+		width: 320px;
+	}
+	.tf-form * {
+		font-size: 16px !important;
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.tf-form {
+		width: 80%;
+	}
+	.tf-form * {
+		font-size: 14px !important;
+		width: 100% !important;
+		height: auto !important;
+	}
+}

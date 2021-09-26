@@ -1,0 +1,119 @@
+.Filter {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: end;
+	width: 100%;
+	height: auto;
+	margin-top: 24px;
+	padding: 8px;
+	border-bottom: 1px solid var(--secondary);
+}
+
+.f-input-box {
+	width: 50%;
+	margin-right: 16px;
+}
+
+.f-input {
+	width: 100%;
+	font-size: 20px;
+	padding: 8px;
+	border: 0;
+	outline: none;
+	background-color: transparent;
+	color: var(--on-primary);
+}
+.f-input::placeholder {
+	color: var(--placeholder-1);
+}
+
+/** This is for the radios */
+.f-types {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	margin-top: 8px;
+	background-color: var(--dark-form);
+	padding: 8px;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.f-type {
+	background-color: var(--dark-form);
+	width: 100px;
+	font-size: 16px;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	margin: 0 8px 0;
+	border: 1px solid var(--secondary);
+	color: var(--secondary);
+	padding: 6px;
+	border-radius: 4px;
+	position: relative;
+	transition: all 0.5s ease;
+	cursor: pointer;
+}
+.f-label {
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s ease;
+}
+.f-type input {
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	border-radius: 0;
+	outline: none;
+	border: 0;
+	transition: all 0.5s ease;
+	opacity: 0;
+}
+.f-type input[type='radio']:checked:checked ~ .f-label {
+	background-color: var(--secondary);
+	color: var(--on-secondary);
+}
+.f-type input:checked {
+	color: black;
+}
+
+.f-type span {
+	margin-left: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+	.Filter {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 0;
+	}
+
+	.f-input-box {
+		width: 80%;
+		border-bottom: 1px solid var(--secondary);
+	}
+
+	.f-types {
+		width: 75%;
+	}
+
+	div.f-types div.f-type * {
+		font-size: 12px !important;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+}
